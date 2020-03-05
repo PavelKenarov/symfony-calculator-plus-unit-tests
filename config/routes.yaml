@@ -1,0 +1,4 @@
+# Default page
+index:
+    path: /
+    controller: App\Controller\CalculatorController::calculate
