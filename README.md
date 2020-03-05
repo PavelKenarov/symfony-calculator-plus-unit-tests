@@ -7,7 +7,7 @@
 - Project was development using XAMPP with installed composer and last symfony version. 
 - If you have installed XAMPP with composer just navigate to the chosen directory and run:
 ```shell
-composer create-project symfony/website-skeleton simple-calculator
+composer create-project symfony/website-skeleton <chosen directory>
 ```
 - After that install PHPUnit library:
 ```shell
