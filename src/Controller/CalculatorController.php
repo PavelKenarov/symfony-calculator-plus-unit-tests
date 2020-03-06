@@ -19,11 +19,9 @@ class CalculatorController extends AbstractController {
         $form = $this->createForm(CalculatorType::class, $calculator);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted()){
-            if ($form->isValid()){
-                $calculate = $form->getData();
-                $result = $calculate->makeCalculations();
-            }
+        if ($form->isSubmitted() && $form->isValid()){
+            $calculate = $form->getData();
+            $result = $calculate->calculationsFactory();
         }
 
         return $this->render('Calculator/Calculator.html.twig',

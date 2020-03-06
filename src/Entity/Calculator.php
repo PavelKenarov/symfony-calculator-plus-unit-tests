@@ -59,10 +59,13 @@ class Calculator {
         $this->expression = $expression;
     }
 
-    public function makeCalculations()
+    public function calculationsFactory()
     {
-        $className = trim('App\Entity\Calculation\ ') . ucfirst($this->getExpression());
-        $instance = new $className();
-        return  $instance->doCalculation($this->getFirstValue(), $this->getSecondValue());
+        $class = rtrim('App\Entity\Calculation\ ') . ucfirst($this->getExpression());
+        if(class_exists($class)){
+            $instance = new $class();
+            return  $instance->doCalculation($this->getFirstValue(), $this->getSecondValue());
+        }
+        throw new \RuntimeException('The class not found on Calculator::calculationsFactory()!');
     }
 }

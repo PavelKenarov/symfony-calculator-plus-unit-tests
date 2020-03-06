@@ -4,7 +4,8 @@
 
 
 ## Using the Calculator Application
-- The project was development using XAMPP with installed composer using last symfony version. If you have it just navigate to the chosen directory and run:
+- Project was development using XAMPP with installed composer and last symfony version. 
+- If you have installed XAMPP with composer just navigate to the chosen directory and run:
 ```shell
 composer create-project symfony/website-skeleton simple-calculator
 ```
@@ -25,7 +26,7 @@ php -S 127.0.0.1:8080 -t public
 
 You can clone the project into your machine and run as separate project or copy only this modifications
 
-- After that must clear the cache:
+- After that must clear the cache and reset environment:
 ```shell
 php bin/console cache:clear --no-warmup --env=prod
 ```
